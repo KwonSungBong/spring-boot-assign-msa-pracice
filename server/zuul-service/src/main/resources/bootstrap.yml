@@ -1,6 +1,6 @@
 spring:
   application:
-    name: management-ui-service
+    name: zuul-service
 
   cloud:
     config:
