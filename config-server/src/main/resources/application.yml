@@ -1,9 +1,0 @@
-server:
-  port: 9000
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/KwonSungBong/spring-boot-assign-msa-config.git
