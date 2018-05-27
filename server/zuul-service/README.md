@@ -12,7 +12,7 @@ curl localhost:8095/test
 curl zuulService:zuulServiceSecret@localhost:8095/oauth/token -d grant_type=password -d username=user -d password=password
 
 #토큰설정해서 요청
-curl -H "Authorization: Bearer [access_token]" localhost:8095/user
+curl -H "Authorization: Bearer [access_token]" localhost:8095/auth/me
 
 
 

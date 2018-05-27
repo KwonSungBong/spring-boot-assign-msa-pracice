@@ -1,0 +1,25 @@
+version: '2.1'
+
+services:
+  config-server:
+    image: com.example/config-server:latest
+    ports:
+      - "8888:8888"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  eureka-service:
+    image: com.example/eureka-service:latest
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - config-server
+  zuul-service:
+    image: com.example/zuul-service:latest
+    ports:
+      - "8095:8095"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - eureka-service

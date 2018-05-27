@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @RestController
-@RequestMapping("/me")
+@RequestMapping("/auth")
 public class UserController {
 
-    @GetMapping
+    @GetMapping("/me")
     public Principal me(Principal user) {
         return user;
     }
