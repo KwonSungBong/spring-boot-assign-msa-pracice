@@ -10,9 +10,9 @@ https://github.com/KwonSungBong/spring-boot-docker-sample
 
 ############################################################
 
+https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/kafka-streams-samples
 
-
-
+https://docs.spring.io/spring-cloud-stream/docs/Brooklyn.RELEASE/reference/htmlsingle/#_kafka_binder_properties
 
 
 
