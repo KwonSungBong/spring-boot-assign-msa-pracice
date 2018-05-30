@@ -16,5 +16,24 @@ https://docs.spring.io/spring-cloud-stream/docs/Brooklyn.RELEASE/reference/htmls
 
 https://github.com/PacktPublishing/Spring-5.0-Microservices-Second-Edition
 
+............................................................
+
+
+
+1. create notification
+2. create assign and result notification-user-media
+3. scheduler check result 
+4. scheduler exec push
+5. push exec push-media
+
+ 
+
+
+
+
+
+
+
+
 
 
