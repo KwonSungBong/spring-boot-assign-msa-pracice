@@ -14,6 +14,11 @@ curl zuulService:zuulServiceSecret@localhost:8095/oauth/token -d grant_type=pass
 #토큰설정해서 요청
 curl -H "Authorization: Bearer [access_token]" localhost:8095/auth/me
 
+curl -H "Authorization: Bearer [access_token]" localhost:8095/user
+
+
+
+keytool -list -rfc --keystore keystore.jks | openssl x509 -inform pem -pubkey
 
 
 
