@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.User;
+import com.example.demo.domain.UserDto;
 import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -31,4 +32,12 @@ public class UserService implements UserDetailsService {
                 .contains(new SimpleGrantedAuthority("ADMIN"));
     }
 
+    public UserDto.Refer findByUsername(String username) {
+        User user = userRepository.findByEmail(username);
+        UserDto.Refer refer = new UserDto.Refer();
+        refer.setId(user.getId());
+        refer.setName(user.getName());
+        refer.setEmail(user.getEmail());
+        return refer;
+    }
 }

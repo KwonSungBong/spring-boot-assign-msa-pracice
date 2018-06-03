@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.util.Collection;
+import java.util.Date;
 
 @Data
 @Entity
@@ -18,30 +19,32 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue
-    public Long id;
+    private Long id;
 
     @NotNull
-    public String email;
+    private String email;
 
     @NotNull
-    public String password;
+    private String password;
 
     @NotNull
-    public String authorities;
+    private String authorities;
 
     @NotNull
-    public Boolean enabled = false;
+    private Boolean enabled = false;
 
-//    //audience
-//    String name;
-//    //audience
-//    String gender;
-//    //audience
-//    String birth;
-//    //audience
-//    String address;
-//    //audience
-//    String interest;
+//    @NotNull
+    private String name;
+
+//    @NotNull
+    private String gender;
+
+//    @NotNull
+    private Date birth;
+
+    private String address;
+
+    private String interest;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -17,8 +17,7 @@ public class DefaultConfig {
 
     @Bean
     public AuthClient authClient() {
-        AuthClient authClient = Feign.builder().
-                target(AuthClient.class,  "http://localhost:8095");
+        AuthClient authClient = Feign.builder().target(AuthClient.class,  "http://localhost:8095");
         return authClient;
     }
 

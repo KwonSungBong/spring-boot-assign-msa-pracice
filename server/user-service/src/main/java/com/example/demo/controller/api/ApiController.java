@@ -16,6 +16,7 @@ public class ApiController {
 
     @GetMapping
     public String me(@RequestHeader("authorization") String authorization) {
-        return authClient.me(authorization);
+        String result = authClient.me(authorization);
+        return result;
     }
 }
